@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Consultorio de las Xordxs</title>
+    <style>
+        body {
+            background-color: #f0e4f7;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #fff;
+        }
+        .header h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .column {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 22%;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .column h2 {
+            font-size: 24px;
+            text-transform: lowercase;
+            color: #555;
+        }
+        .column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .column ul li {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #777;
+        }
+        .column button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff9a9e;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .column button:hover {
+            background-color: #ff6f91;
+        }
+        /* Colores inspirados en las Supernenas */
+        .jordi {
+            border-top: 5px solid #ff6f91; /* Rosa */
+        }
+        .jordy {
+            border-top: 5px solid #845ec2; /* Morado */
+        }
+        .yordy {
+            border-top: 5px solid #ffc75f; /* Amarillo */
+        }
+        .iordi {
+            border-top: 5px solid #0081cf; /* Azul */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>El Consultorio de las Xordxs</h1>
+    </div>
+    <div class="container">
+        <div class="column jordi">
+            <h2>jordi</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('jordi@example.com', 'jordi')">Contactar a jordi</button>
+        </div>
+        <div class="column jordy">
+            <h2>jordy</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('jordy@example.com', 'jordy')">Contactar a jordy</button>
+        </div>
+        <div class="column yordy">
+            <h2>yordy</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('yordy@example.com', 'yordy')">Contactar a yordy</button>
+        </div>
+        <div class="column iordi">
+            <h2>iordi</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('iordi@example.com', 'iordi')">Contactar a iordi</button>
+        </div>
+    </div>
+    <script>
+        function sendEmail(address, name) {
+            var subject = 'consulta para ' + name;
+            window.location.href = `mailto:${address}?subject=${encodeURIComponent(subject)}`;
+        }
+    </script>
+</body>
+</html>

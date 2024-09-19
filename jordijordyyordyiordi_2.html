@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Consultorio de las Xordxs</title>
+    <style>
+        /* Importar una fuente mágica */
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+        body {
+            background: linear-gradient(45deg, #ffe4e1, #e0ffff);
+            font-family: 'Fredoka One', cursive;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .header h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: relative;
+            z-index: 2;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5), transparent);
+            animation: magic 5s infinite;
+        }
+        @keyframes magic {
+            0% { transform: translate(-50%, -50%) scale(0.5); }
+            50% { transform: translate(-50%, -50%) scale(1.5); }
+            100% { transform: translate(-50%, -50%) scale(0.5); }
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .column {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 250px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .column h2 {
+            font-size: 24px;
+            text-transform: lowercase;
+            color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .column ul {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .column ul li {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #fff;
+        }
+        .column button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 25px;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+        .column button:hover {
+            background-color: #fff;
+        }
+        /* Efectos mágicos en las columnas */
+        .column::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent);
+            animation: sparkle 6s infinite;
+        }
+        @keyframes sparkle {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.5); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        /* Colores inspirados en las Supernenas */
+        .jordi {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+        }
+        .jordy {
+            background: linear-gradient(135deg, #845ec2, #d65db1);
+        }
+        .yordy {
+            background: linear-gradient(135deg, #ffc75f, #f9f871);
+        }
+        .iordi {
+            background: linear-gradient(135deg, #0081cf, #00c9a7);
+        }
+        /* Responsividad */
+        @media (max-width: 800px) {
+            .column {
+                width: 45%;
+            }
+        }
+        @media (max-width: 500px) {
+            .column {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>El Consultorio de las Xordxs</h1>
+    </div>
+    <div class="container">
+        <div class="column jordi">
+            <h2>jordi</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('jordi@example.com', 'jordi')">Contactar a jordi</button>
+        </div>
+        <div class="column jordy">
+            <h2>jordy</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('jordy@example.com', 'jordy')">Contactar a jordy</button>
+        </div>
+        <div class="column yordy">
+            <h2>yordy</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('yordy@example.com', 'yordy')">Contactar a yordy</button>
+        </div>
+        <div class="column iordi">
+            <h2>iordi</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('iordi@example.com', 'iordi')">Contactar a iordi</button>
+        </div>
+    </div>
+    <script>
+        function sendEmail(address, name) {
+            var subject = 'consulta para ' + name;
+            window.location.href = `mailto:${address}?subject=${encodeURIComponent(subject)}`;
+        }
+    </script>
+</body>
+</html>

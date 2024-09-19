@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Consultorio de las Xordxs</title>
+    <style>
+        /* Importar una fuente mágica */
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Fredoka One', cursive;
+            color: #333;
+            /* Fondo con patrón mágico */
+            background: linear-gradient(45deg, #f3e7e9, #e3eeff);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            /* Mismo fondo que el body */
+            background: inherit;
+        }
+
+        .column {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 250px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .column h2 {
+            font-size: 24px;
+            text-transform: lowercase;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .column ul {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .column ul li {
+            margin: 10px 0;
+            font-size: 16px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .column button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 25px;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .column button:hover {
+            background-color: #fff;
+        }
+
+        /* Columnas con colores personalizados */
+        .jordi {
+            background: rgba(135, 206, 250, 0.8); /* Azul celeste */
+        }
+
+        .jordy {
+            background: rgba(255, 182, 193, 0.8); /* Rosa claro */
+        }
+
+        .yordy {
+            background: rgba(255, 255, 153, 0.8); /* Amarillo pastel */
+        }
+
+        .iordi {
+            /* Fondo de universo con estrellas */
+            background: url('https://i.imgur.com/9z3z1T4.jpg') no-repeat center center/cover;
+            color: #f0f0f0;
+        }
+
+        /* Responsividad */
+        @media (max-width: 800px) {
+            .column {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .column {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>El Consultorio de las Xordxs</h1>
+    </div>
+    <div class="container">
+        <div class="column jordi">
+            <h2>jordi</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('jordi')">Contactar a jordi</button>
+        </div>
+        <div class="column jordy">
+            <h2>jordy</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('jordy')">Contactar a jordy</button>
+        </div>
+        <div class="column yordy">
+            <h2>yordy</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('yordy')">Contactar a yordy</button>
+        </div>
+        <div class="column iordi">
+            <h2>iordi</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor</li>
+            </ul>
+            <button onclick="sendEmail('iordi')">Contactar a iordi</button>
+        </div>
+    </div>
+    <script>
+        function sendEmail(name) {
+            var subject = name;
+            var address = 'jordicerarols@gmail.com';
+            window.location.href = `mailto:${address}?subject=${encodeURIComponent(subject)}`;
+        }
+    </script>
+</body>
+</html>
