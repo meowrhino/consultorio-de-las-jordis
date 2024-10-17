@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <title>El Consultorio de las Xordxs</title>
     <style>
-        /* Importar una fuente mágica */
+        /* Importar una fuente moderna */
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
         body {
-margin: 0;
-padding: 0;
-font-family: 'Fredoka One', cursive;
-color: #333;
-/* Fondo con patrón más dinámico */
-background: linear-gradient(45deg, #ff6f61, #ffca61, #61ff87, #61a6ff);
-background-size: 200% 200%;
-animation: gradientBG 5s linear infinite;
+            margin: 0;
+            padding: 0;
+            font-family: 'Fredoka One', cursive;
+            color: #333;
+            background: linear-gradient(135deg, #ffa726, #66bb6a, #29b6f6, #ef5350);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         @keyframes gradientBG {
@@ -28,17 +30,12 @@ animation: gradientBG 5s linear infinite;
             text-align: center;
             padding: 50px 0;
             color: #fff;
-            position: relative;
-            overflow: hidden;
         }
 
         .header h1 {
             font-size: 48px;
             text-transform: uppercase;
             letter-spacing: 5px;
-            position: relative;
-            z-index: 2;
-            color: #fff;
             text-shadow: 2px 2px 4px #000;
         }
 
@@ -46,58 +43,55 @@ animation: gradientBG 5s linear infinite;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 20px;
-            /* Mismo fondo que el body */
-            background: inherit;
+            margin: 20px auto;
+            width: 90%;
         }
 
         .column {
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             width: 250px;
-            margin: 10px;
+            margin: 15px;
             padding: 20px;
             text-align: center;
             position: relative;
-            overflow: hidden;
+            color: #333;
+            transition: transform 0.3s;
             background-size: cover;
-            color: #fff;
+            background-blend-mode: overlay;
+        }
+
+        .column:hover {
+            transform: translateY(-10px);
         }
 
         .column h2 {
             font-size: 24px;
             text-transform: lowercase;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 2;
-            text-shadow: 1px 1px 2px #000;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .column ul {
             list-style-type: none;
             padding: 0;
-            position: relative;
-            z-index: 2;
         }
 
         .column ul li {
             margin: 10px 0;
             font-size: 16px;
-            text-shadow: 1px 1px 2px #000;
         }
 
         .column button {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border: none;
             border-radius: 25px;
             color: #333;
             cursor: pointer;
             transition: background-color 0.3s;
-            position: relative;
-            z-index: 2;
         }
 
         .column button:hover {
@@ -106,20 +100,19 @@ animation: gradientBG 5s linear infinite;
 
         /* Columnas con colores personalizados */
         .jordi {
-            background: rgba(135, 206, 250, 0.8); /* Azul celeste */
+            background: linear-gradient(135deg, rgba(135, 206, 250, 0.9), rgba(255, 255, 255, 0.5));
         }
 
         .jordy {
-            background: rgba(255, 182, 193, 0.8); /* Rosa claro */
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(255, 255, 255, 0.5));
         }
 
         .yordy {
-            background: rgba(255, 255, 153, 0.8); /* Amarillo pastel */
+            background: linear-gradient(135deg, rgba(255, 255, 153, 0.9), rgba(255, 255, 255, 0.5));
         }
 
         .iordi {
-            /* Fondo de universo con estrellas */
-            background: url('https://i.imgur.com/9z3z1T4.jpg') no-repeat center center/cover;
+            background: linear-gradient(135deg, rgba(55, 55, 55, 0.9), rgba(255, 255, 255, 0.5)), url('https://i.imgur.com/9z3z1T4.jpg') no-repeat center center/cover;
             color: #f0f0f0;
         }
 
