@@ -5,19 +5,14 @@
     <title>El Consultorio de las Xordxs</title>
     <style>
         /* Importar una fuente moderna */
-       @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
         body {
             margin: 0;
             padding: 0;
-            font-family: "Fredoka", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: <weight>;
-            font-style: normal;
-            font-variation-settings:
-            "wdth" 100;
-            color: #333;
-            background: linear-gradient(135deg, #ffa726, #66bb6a, #29b6f6, #ef5350);
+            font-family: 'Fredoka One', cursive;
+            color: #fff;
+            background: linear-gradient(135deg, #87cefa, #ffb6c1, #ffff99);
             background-size: 400% 400%;
             animation: gradientBG 10s ease infinite;
             min-height: 100vh;
@@ -34,14 +29,12 @@
         .header {
             text-align: center;
             padding: 50px 0;
-            color: #fff;
         }
 
         .header h1 {
             font-size: 48px;
-            text-transform: uppercase;
             letter-spacing: 5px;
-            text-shadow: 2px 2px 4px #000;
+            text-shadow: 2px 2px 4px #888;
         }
 
         .container {
@@ -53,17 +46,14 @@
         }
 
         .column {
-            border-radius: 15px;
+            border-radius: 5px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             width: 250px;
             margin: 15px;
             padding: 20px;
             text-align: center;
             position: relative;
-            color: #333;
             transition: transform 0.3s;
-            background-size: cover;
-            background-blend-mode: overlay;
         }
 
         .column:hover {
@@ -72,7 +62,6 @@
 
         .column h2 {
             font-size: 24px;
-            text-transform: lowercase;
             margin-bottom: 15px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
@@ -93,10 +82,9 @@
             font-size: 16px;
             background-color: rgba(255, 255, 255, 0.9);
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             color: #333;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
         .column button:hover {
@@ -105,20 +93,19 @@
 
         /* Columnas con colores personalizados */
         .jordi {
-            background: linear-gradient(135deg, rgba(135, 206, 250, 0.9), rgba(255, 255, 255, 0.5));
+            background: #87cefa;
         }
 
         .jordy {
-            background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(255, 255, 255, 0.5));
+            background: #ffb6c1;
         }
 
         .yordy {
-            background: linear-gradient(135deg, rgba(255, 255, 153, 0.9), rgba(255, 255, 255, 0.5));
+            background: #ffff99;
         }
 
         .iordi {
-            background: linear-gradient(135deg, rgba(55, 55, 55, 0.9), rgba(255, 255, 255, 0.5)), url('https://i.imgur.com/9z3z1T4.jpg') no-repeat center center/cover;
-            color: #f0f0f0;
+            background: url('https://i.imgur.com/9z3z1T4.jpg');
         }
 
         /* Responsividad */
@@ -143,36 +130,40 @@
         <div class="column jordi">
             <h2>jordi</h2>
             <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipiscing elit</li>
-                <li>Sed do eiusmod tempor</li>
+                <li>conecta con tu niñe interior</li>
+                <li>el silencio y el descanso</li>
+                <li>¿qué dicen tus sueños?</li>
+                <li>el poder de no hacer</li>
             </ul>
             <button onclick="sendEmail('jordi')">Contactar a jordi</button>
         </div>
         <div class="column jordy">
             <h2>jordy</h2>
             <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipiscing elit</li>
-                <li>Sed do eiusmod tempor</li>
+                <li>el amor y sus líos</li>
+                <li>¿cómo son tus vínculos y relaciones?</li>
+                <li>¡súbete a la montaña rusa de tus emociones!</li>
+                <li>el arte del coqueteo</li>
             </ul>
             <button onclick="sendEmail('jordy')">Contactar a jordy</button>
         </div>
         <div class="column yordy">
             <h2>yordy</h2>
             <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipiscing elit</li>
-                <li>Sed do eiusmod tempor</li>
+                <li>tiempo y paciencia</li>
+                <li>¿cuándo fue la última vez que lloraste de feliz?</li>
+                <li>cómo conocer a tu alma</li>
+                <li>brindemos por los fracasos</li>
             </ul>
             <button onclick="sendEmail('yordy')">Contactar a yordy</button>
         </div>
         <div class="column iordi">
             <h2>iordi</h2>
             <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipiscing elit</li>
-                <li>Sed do eiusmod tempor</li>
+                <li>hazme una pregunta loca</li>
+                <li>¿sóle o conmigo?</li>
+                <li>la otredad</li>
+                <li>¿follamos o hacemos el amor?</li>
             </ul>
             <button onclick="sendEmail('iordi')">Contactar a iordi</button>
         </div>
